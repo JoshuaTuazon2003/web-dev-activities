@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap');
+
+body {
+    background:#a0c4ff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+input {
+    width: 250px;
+    padding: 30px;
+    border: 5px solid #5b9bd5; /* Soft blue border */
+    border-radius: 20px;
+    outline: none;
+    font-size: 25px;
+    background-color: #e0f2fe; /* Light blue background for input */
+    color: #0277bd; /* Darker blue text */
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Button container with updated layout, centered buttons */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center; /* Center buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 20px; /* Add some space between buttons */
+    margin-top: 20px;
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(to right, #3a75a5, #598ba1); /* Light blue gradient for buttons */
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 180px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #2196f3, #4fc3f7); /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+

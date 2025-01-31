@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body {
+            background-color: #350601;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .calculator {
+            background-color: #fffafa;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .calculator h1 {
+            color: #000000;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .screen {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .screen input {
+            width: 100%;
+            height: 40px;
+            font-size: 1.2rem;
+            text-align: right;
+            margin-bottom: 10px;
+            border: 1px solid #8d7881;
+            border-radius: 5px;
+            background-color: #8d6f7b;
+            color: #333;
+            padding: 5px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 1px solid #755e68;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ffebef;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #ffccd5;
+        }
+
+        button:active {
+            background-color: #ffb3c1;
+        }
+
+        button.number {
+            background-color: #ffe6f2;
+        }
+
+        button.operator {
+            background-color: #f9d1d9;
+        }
+
+        button#equals {
+            background-color: #f7c5e0;
+            grid-column: span 2;
+        }
+
+        button#clear {
+            background-color: #000000;
+            grid-column: span 2;
+        }
+    </style>
+
+    <script src="./js/numbers.js"></script>
+    <script src="./js/operator.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <div class="screen">
+            <input type="text" id="display" value="0" readonly>
+            <input type="text" id="display2" readonly style="display:none;">
+            <input type="text" id="operator" readonly>
+        </div>
+        <div class="buttons">
+            <button type="button" class="number" onclick="seven()">7</button>
+            <button type="button" class="number" onclick="eight()">8</button>
+            <button type="button" class="number" onclick="nine()">9</button>
+            <button type="button" class="operator" onclick="add()">+</button>
+
+            <button type="button" class="number" onclick="four()">4</button>
+            <button type="button" class="number" onclick="five()">5</button>
+            <button type="button" class="number" onclick="six()">6</button>
+            <button type="button" class="operator" onclick="minus()">-</button>
+
+            <button type="button" class="number" onclick="one()">1</button>
+            <button type="button" class="number" onclick="two()">2</button>
+            <button type="button" class="number" onclick="three()">3</button>
+            <button type="button" class="operator" onclick="times()">*</button>
+
+            <button type="button" class="number" onclick="zero()">0</button>
+            <button type="button" class="number" onclick="dot()">.</button>
+            <button type="button" class="operator" onclick="divide()">/</button>
+            <button type="button" id="equals" onclick="equals()">=</button>
+        </div>
+    </div>
+</body>
+</html>
